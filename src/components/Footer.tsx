@@ -9,9 +9,9 @@ const Footer = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-2">
               <div className="w-8 h-8 bg-white rounded-lg flex items-center justify-center">
-                <span className="text-primary font-bold text-sm">TR</span>
+                <span className="text-primary font-bold text-sm">RR</span>
               </div>
-              <span className="font-bold text-xl">TurismoRural</span>
+              <span className="font-bold text-xl">RotaRural</span>
             </div>
             <p className="text-primary-foreground/80 text-sm leading-relaxed">
               Conectando pessoas às experiências rurais autênticas em todo o Brasil.
@@ -68,7 +68,7 @@ const Footer = () => {
         <hr className="my-8 border-primary-foreground/20" />
 
         <div className="flex flex-col md:flex-row justify-between items-center text-sm text-primary-foreground/80">
-          <p>&copy; 2024 TurismoRural. Todos os direitos reservados.</p>
+          <p>&copy; 2024 RotaRural. Todos os direitos reservados.</p>
           <div className="flex space-x-6 mt-4 md:mt-0">
             <a href="#" className="hover:text-white transition-colors">Privacidade</a>
             <a href="#" className="hover:text-white transition-colors">Termos</a>

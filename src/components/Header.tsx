@@ -16,9 +16,9 @@ const Header = () => {
         {/* Logo */}
         <div className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-gradient-nature rounded-lg flex items-center justify-center">
-            <span className="text-white font-bold text-sm">TR</span>
+            <span className="text-white font-bold text-sm">RR</span>
           </div>
-          <span className="font-bold text-xl text-primary">TurismoRural</span>
+          <span className="font-bold text-xl text-primary">RotaRural</span>
         </div>
 
         {/* Desktop Navigation */}
