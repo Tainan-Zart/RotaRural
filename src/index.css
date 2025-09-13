@@ -2,39 +2,62 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Design System - Turismo Rural Platform
+All colors MUST be HSL. Natural, earthy tones inspired by rural landscapes.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 45 25% 98%;
+    --foreground: 25 35% 15%;
 
     --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card-foreground: 25 35% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 25 35% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Nature-inspired primary green */
+    --primary: 120 40% 25%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 120 35% 45%;
+    --primary-dark: 120 45% 20%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Warm earth secondary */
+    --secondary: 35 25% 88%;
+    --secondary-foreground: 25 35% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 35 15% 92%;
+    --muted-foreground: 25 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Warm accent */
+    --accent: 35 40% 85%;
+    --accent-foreground: 25 35% 15%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 35 20% 88%;
+    --input: 35 20% 92%;
+    --ring: 120 40% 25%;
+
+    /* Custom Rural Theme Colors */
+    --nature-green: 120 40% 25%;
+    --forest-green: 120 50% 20%;
+    --earth-brown: 25 30% 35%;
+    --warm-beige: 35 25% 88%;
+    --sage-green: 120 20% 60%;
+    --sunset-orange: 25 75% 65%;
+    
+    /* Gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(120 40% 25%) 0%, hsl(120 50% 20%) 50%, hsl(25 30% 35%) 100%);
+    --gradient-card: linear-gradient(145deg, hsl(0 0% 100%) 0%, hsl(35 15% 96%) 100%);
+    --gradient-nature: linear-gradient(180deg, hsl(120 35% 45%) 0%, hsl(120 40% 25%) 100%);
+    
+    /* Shadows */
+    --shadow-soft: 0 4px 20px -4px hsl(25 30% 35% / 0.1);
+    --shadow-card: 0 8px 30px -8px hsl(25 30% 35% / 0.15);
+    --shadow-hero: 0 20px 60px -20px hsl(120 40% 25% / 0.3);
 
     --radius: 0.5rem;
 

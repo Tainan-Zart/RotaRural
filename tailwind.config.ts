@@ -22,6 +22,8 @@ export default {
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",
+          light: "hsl(var(--primary-light))",
+          dark: "hsl(var(--primary-dark))",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
@@ -57,6 +59,29 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Custom rural theme colors
+        nature: {
+          green: "hsl(var(--nature-green))",
+          forest: "hsl(var(--forest-green))",
+          sage: "hsl(var(--sage-green))",
+        },
+        earth: {
+          brown: "hsl(var(--earth-brown))",
+          beige: "hsl(var(--warm-beige))",
+        },
+        sunset: {
+          orange: "hsl(var(--sunset-orange))",
+        },
+      },
+      backgroundImage: {
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-card': 'var(--gradient-card)',
+        'gradient-nature': 'var(--gradient-nature)',
+      },
+      boxShadow: {
+        'soft': 'var(--shadow-soft)',
+        'card': 'var(--shadow-card)',
+        'hero': 'var(--shadow-hero)',
       },
       borderRadius: {
         lg: "var(--radius)",
