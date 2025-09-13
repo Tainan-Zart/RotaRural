@@ -2,11 +2,15 @@ import HeroSection from "@/components/HeroSection";
 import PropertyCard from "@/components/PropertyCard";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Compass, Mountain, TreePine, Camera, Award, Shield } from "lucide-react";
+import { Compass, Mountain, TreePine, Camera, Award, Shield, ChefHat } from "lucide-react";
 
 import property1 from "@/assets/property-1.jpg";
 import property2 from "@/assets/property-2.jpg";
 import experience1 from "@/assets/experience-1.jpg";
+import gastronomia1 from "@/assets/gastronomia-1.jpg";
+import gastronomia2 from "@/assets/gastronomia-2.jpg";
+import gastronomia3 from "@/assets/gastronomia-3.jpg";
+import gastronomia4 from "@/assets/gastronomia-4.jpg";
 
 const Index = () => {
   const featuredProperties = [
@@ -42,6 +46,50 @@ const Index = () => {
       image: experience1,
       amenities: ["cafe"],
       type: "experiencia" as const
+    },
+    {
+      id: "4",
+      title: "Casa do Pão Rural",
+      location: "Interior de São Paulo, SP",
+      price: 95,
+      rating: 4.9,
+      reviews: 156,
+      image: gastronomia1,
+      amenities: ["wifi", "cafe", "estacionamento"],
+      type: "gastronomia" as const
+    },
+    {
+      id: "5",
+      title: "Vinícola Familiar Santos",
+      location: "Serra Gaúcha, RS",
+      price: 320,
+      rating: 4.8,
+      reviews: 92,
+      image: gastronomia2,
+      amenities: ["wifi", "estacionamento"],
+      type: "gastronomia" as const
+    },
+    {
+      id: "6",
+      title: "Aula de Culinária Rural",
+      location: "Região Serrana, RJ",
+      price: 150,
+      rating: 4.9,
+      reviews: 78,
+      image: gastronomia3,
+      amenities: ["cafe"],
+      type: "experiencia" as const
+    },
+    {
+      id: "7",
+      title: "Queijaria Artesanal",
+      location: "Sul de Minas, MG",
+      price: 85,
+      rating: 4.7,
+      reviews: 134,
+      image: gastronomia4,
+      amenities: ["wifi", "cafe", "estacionamento"],
+      type: "gastronomia" as const
     }
   ];
 
@@ -49,6 +97,7 @@ const Index = () => {
     { name: "Fazendas", icon: TreePine, count: "150+" },
     { name: "Pousadas Rurais", icon: Mountain, count: "200+" }, 
     { name: "Experiências", icon: Camera, count: "300+" },
+    { name: "Gastronomia Rural", icon: ChefHat, count: "180+" },
     { name: "Turismo Ecológico", icon: Compass, count: "100+" }
   ];
 
@@ -87,7 +136,7 @@ const Index = () => {
             </p>
           </div>
 
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
             {categories.map((category, index) => (
               <div key={index} className="group cursor-pointer">
                 <div className="bg-white rounded-xl p-6 shadow-soft hover:shadow-card transition-all duration-300 text-center border border-border/30 group-hover:border-primary/20">
@@ -137,7 +186,7 @@ const Index = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">
-              Por que Escolher o TurismoRural?
+              Por que Escolher o RotaRural?
             </h2>
             <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
               Conectamos você às melhores experiências rurais do país

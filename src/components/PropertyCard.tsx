@@ -11,7 +11,7 @@ interface PropertyCardProps {
   reviews: number;
   image: string;
   amenities: string[];
-  type: "fazenda" | "sitio" | "pousada" | "experiencia";
+  type: "fazenda" | "sitio" | "pousada" | "experiencia" | "gastronomia";
 }
 
 const PropertyCard = ({
@@ -34,6 +34,8 @@ const PropertyCard = ({
         return "bg-primary-light text-white";
       case "experiencia":
         return "bg-sunset-orange text-white";
+      case "gastronomia":
+        return "bg-primary text-white";
       default:
         return "bg-muted";
     }
