@@ -33,7 +33,7 @@ const MapComponent = ({ properties }: MapComponentProps) => {
 
     // Initialize map
     mapboxgl.accessToken = mapboxToken;
-    
+
     map.current = new mapboxgl.Map({
       container: mapContainer.current,
       style: 'mapbox://styles/mapbox/light-v11',
@@ -87,18 +87,18 @@ const MapComponent = ({ properties }: MapComponentProps) => {
                 value={mapboxToken}
                 onChange={(e) => setMapboxToken(e.target.value)}
               />
-              <Button 
-                className="w-full" 
-                onClick={() => {/* Token será usado no useEffect */}}
+              <Button
+                className="w-full"
+                onClick={() => {/* Token será usado no useEffect */ }}
                 disabled={!mapboxToken.trim()}
               >
                 Carregar Mapa
               </Button>
               <p className="text-xs text-muted-foreground text-center">
                 Obtenha seu token em{' '}
-                <a 
-                  href="https://mapbox.com" 
-                  target="_blank" 
+                <a
+                  href="https://mapbox.com"
+                  target="_blank"
                   rel="noopener noreferrer"
                   className="text-primary hover:underline"
                 >
@@ -115,15 +115,15 @@ const MapComponent = ({ properties }: MapComponentProps) => {
   return (
     <div className="relative h-full">
       <div ref={mapContainer} className="absolute inset-0 rounded-lg" />
-      
+
       {/* Property popup */}
       {selectedProperty && (
         <div className="absolute bottom-4 left-4 right-4 z-10">
           <Card className="bg-white/95 backdrop-blur-sm border-0 shadow-lg">
             <CardContent className="p-4">
               <div className="flex gap-3">
-                <img 
-                  src={selectedProperty.image} 
+                <img
+                  src={selectedProperty.image}
                   alt={selectedProperty.title}
                   className="w-16 h-16 rounded-lg object-cover"
                 />
@@ -143,8 +143,8 @@ const MapComponent = ({ properties }: MapComponentProps) => {
                     R$ {selectedProperty.price}/noite
                   </p>
                 </div>
-                <Button 
-                  variant="ghost" 
+                <Button
+                  variant="ghost"
                   size="sm"
                   onClick={() => setSelectedProperty(null)}
                   className="h-8 w-8 p-0 shrink-0"

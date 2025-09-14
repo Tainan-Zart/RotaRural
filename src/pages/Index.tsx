@@ -4,53 +4,55 @@ import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Compass, Mountain, TreePine, Camera, Award, Shield, ChefHat } from "lucide-react";
 
-import property1 from "@/assets/property-1.jpg";
-import property2 from "@/assets/property-2.jpg";
-import experience1 from "@/assets/experience-1.jpg";
-import gastronomia1 from "@/assets/gastronomia-1.jpg";
-import gastronomia2 from "@/assets/gastronomia-2.jpg";
-import gastronomia3 from "@/assets/gastronomia-3.jpg";
-import gastronomia4 from "@/assets/gastronomia-4.jpg";
+import property1 from "@/assets/cafeColonial.jpg";
+import property2 from "@/assets/vinicola.jpg";
+import experience1 from "@/assets/camping.jpg";
+import gastronomia1 from "@/assets/recanto.jpg";
+import gastronomia2 from "@/assets/paradouro.jpg";
+import gastronomia3 from "@/assets/vinicola2.jpg";
+import gastronomia4 from "@/assets/carro.jpg";
+import gastronomia5 from "@/assets/cachaca.jpg";
+import gastronomia6 from "@/assets/rancho.jpg";
 
 const Index = () => {
   const featuredProperties = [
     {
       id: "1",
-      title: "Fazenda Vale Verde",
-      location: "Serra da Mantiqueira, MG",
-      price: 180,
+      title: "Café Colonial Sabor do Campo",
+      location: "Faxinal dos Rosas, Chapecó, SC",
+      price: 68,
       rating: 4.9,
       reviews: 127,
       image: property1,
       amenities: ["wifi", "estacionamento", "cafe"],
-      type: "fazenda" as const
+      type: "gastronomia" as const
     },
     {
-      id: "2", 
-      title: "Pousada Vinhedos",
-      location: "Vale dos Vinhedos, RS",
+      id: "2",
+      title: "Giardino Viel",
+      location: "EMCA, Cordilheira Alta, SC",
       price: 250,
       rating: 4.8,
       reviews: 89,
       image: property2,
       amenities: ["wifi", "estacionamento"],
-      type: "pousada" as const
+      type: "gastronomia" as const
     },
     {
       id: "3",
-      title: "Experiência Cavalgada",
-      location: "Pantanal, MS",
-      price: 120,
+      title: "Camping Sítio Pousada",
+      location: "Linha Boa Vista, Chapecó, SC",
+      price: 300,
       rating: 4.7,
       reviews: 203,
       image: experience1,
-      amenities: ["cafe"],
+      amenities: ["wifi", "estacionamento", "cafe"],
       type: "experiencia" as const
     },
     {
       id: "4",
-      title: "Casa do Pão Rural",
-      location: "Interior de São Paulo, SP",
+      title: "Recanto dos Pinhais",
+      location: "Linha Colonia Cella, Chapecó, SC",
       price: 95,
       rating: 4.9,
       reviews: 156,
@@ -60,42 +62,65 @@ const Index = () => {
     },
     {
       id: "5",
-      title: "Vinícola Familiar Santos",
-      location: "Serra Gaúcha, RS",
-      price: 320,
+      title: "Parador Vale das Cachoeiras",
+      location: "EMC-378 - Rodeio do Erval, Chapecó, SC",
+      price: 150,
+      rating: 4.9,
+      reviews: 78,
+      image: gastronomia2,
+      amenities: ["cafe", "wifi", "estacionamento"],
+      type: "experiencia" as const
+    },
+    {
+      id: "6",
+      title: "Vinícola Ársego",
+      location: "Linha Rodeio do Erval EMC - 378 - Mal. Bormann, Chapecó, SC",
+      price: 300,
       rating: 4.8,
       reviews: 92,
-      image: gastronomia2,
+      image: gastronomia3,
       amenities: ["wifi", "estacionamento"],
       type: "gastronomia" as const
     },
     {
-      id: "6",
-      title: "Aula de Culinária Rural",
-      location: "Região Serrana, RJ",
-      price: 150,
-      rating: 4.9,
-      reviews: 78,
-      image: gastronomia3,
-      amenities: ["cafe"],
-      type: "experiencia" as const
-    },
-    {
       id: "7",
-      title: "Queijaria Artesanal",
-      location: "Sul de Minas, MG",
+      title: "Vaccaro Vintage",
+      location: "EMC-378 - Rodeio do Erval, Chapecó, SC",
       price: 85,
       rating: 4.7,
       reviews: 134,
       image: gastronomia4,
       amenities: ["wifi", "cafe", "estacionamento"],
-      type: "gastronomia" as const
+      type: "experiencia" as const
+    },
+    {
+      id: "8",
+      title: "Cachaçaria Velho Sumido",
+      location: "EMC-378 - Rodeio do Erval, Chapecó, SC",
+      price: 85,
+      rating: 4.9,
+      reviews: 134,
+      image: gastronomia5,
+      amenities: ["wifi", "estacionamento"],
+      type: "experiencia" as const
+    },
+    {
+      id: "9",
+      title: "Rancho Silva",
+      location: "Linha Vailon - Gôio-En, Chapecó, SC",
+      price: 85,
+      rating: 4.8,
+      reviews: 134,
+      image: gastronomia6,
+      amenities: ["wifi", "cafe", "estacionamento"],
+      type: "experiencia" as const
     }
+
   ];
 
   const categories = [
     { name: "Fazendas", icon: TreePine, count: "150+" },
-    { name: "Pousadas Rurais", icon: Mountain, count: "200+" }, 
+    { name: "Pousadas Rurais", icon: Mountain, count: "200+" },
     { name: "Experiências", icon: Camera, count: "300+" },
     { name: "Gastronomia Rural", icon: ChefHat, count: "180+" },
     { name: "Turismo Ecológico", icon: Compass, count: "100+" }
@@ -109,7 +134,7 @@ const Index = () => {
     },
     {
       icon: Shield,
-      title: "Reservas Seguras", 
+      title: "Reservas Seguras",
       description: "Sistema confiável de pagamento e avaliações verificadas"
     },
     {

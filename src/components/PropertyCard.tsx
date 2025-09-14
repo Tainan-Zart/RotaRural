@@ -58,8 +58,8 @@ const PropertyCard = ({
     <div className="group bg-white rounded-xl overflow-hidden shadow-soft hover:shadow-card transition-all duration-300 border border-border/30">
       {/* Image */}
       <div className="relative aspect-[4/3] overflow-hidden">
-        <img 
-          src={image} 
+        <img
+          src={image}
           alt={title}
           className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
         />
@@ -110,10 +110,10 @@ const PropertyCard = ({
         <div className="flex items-center justify-between pt-2 border-t border-border/30">
           <div>
             <span className="text-xl font-bold text-primary">R$ {price}</span>
-            <span className="text-muted-foreground text-sm"> /noite</span>
+            {/* <span className="text-muted-foreground text-sm"> /noite</span> */}
           </div>
-          <Button 
-            size="sm" 
+          <Button
+            size="sm"
             className="bg-gradient-nature text-white hover:opacity-90"
           >
             Ver Detalhes
