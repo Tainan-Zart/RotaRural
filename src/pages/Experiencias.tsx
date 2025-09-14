@@ -7,105 +7,107 @@ import MapComponent from "@/components/MapComponent";
 import PropertyCard from "@/components/PropertyCard";
 import FilterSidebar from "@/components/FilterSidebar";
 
+// Importando o componente inteiro para acessar os dados mockados
+import ProprietarioDashboard from "./ProprietarioDashboard";
+
+// Re-utilizando as imagens mockadas
 import property1 from "@/assets/property-1.jpg";
-import property2 from "@/assets/property-2.jpg";
 import experience1 from "@/assets/experience-1.jpg";
-import gastronomia1 from "@/assets/gastronomia-1.jpg";
-import gastronomia2 from "@/assets/gastronomia-2.jpg";
-import gastronomia3 from "@/assets/gastronomia-3.jpg";
-import gastronomia4 from "@/assets/gastronomia-4.jpg";
+
+import imagem1 from "@/assets/cafeColonial.jpg";
+import imagem2 from "@/assets/vinicola.jpg";
+import imagem3 from "@/assets/camping.jpg";
+import imagem4 from "@/assets/recanto.jpg";
+import imagem5 from "@/assets/paradouro.jpg";
+import imagem6 from "@/assets/vinicola2.jpg";
+import imagem7 from "@/assets/carro.jpg";
+import imagem8 from "@/assets/cachaca.jpg";
+import imagem9 from "@/assets/rancho.jpg";
+
+
 
 const Experiencias = () => {
   const navigate = useNavigate();
   const [viewMode, setViewMode] = useState<'grid' | 'map'>('grid');
   const [isFilterOpen, setIsFilterOpen] = useState(false);
 
-  const experiencias = [
+  // Usando os mesmos dados da página Index para consistência
+  const featuredProperties = [
     {
       id: "1",
-      title: "Fazenda Santa Clara",
-      location: "Interior de São Paulo, SP",
-      price: 180,
-      rating: 4.8,
-      reviews: 124,
-      image: property1,
-      amenities: ["wifi", "cafe", "estacionamento"],
-      type: "fazenda" as const,
-      coordinates: [-23.5505, -46.6333] as [number, number] // São Paulo
+      title: "Café Colonial Sabor do Campo",
+      location: "Faxinal dos Rosas, Chapecó, SC",
+      price: 68,
+      rating: 4.9,
+      reviews: 127,
+      image: imagem1,
+      amenities: ["wifi", "estacionamento", "cafe"],
+      type: "gastronomia" as const,
+      coordinates: [-27.0954, -52.6166] as [number, number]
     },
     {
       id: "2",
-      title: "Sítio Vale Verde",
-      location: "Região Serrana, RJ",
-      price: 150,
-      rating: 4.9,
+      title: "Giardino Viel",
+      location: "EMCA, Cordilheira Alta, SC",
+      price: 250,
+      rating: 4.8,
       reviews: 89,
-      image: property2,
-      amenities: ["wifi", "cafe"],
-      type: "sitio" as const,
-      coordinates: [-22.4609, -42.6417] as [number, number] // Teresópolis
+      image: imagem2,
+      amenities: ["wifi", "estacionamento"],
+      type: "gastronomia" as const,
+      coordinates: [-27.1954, -52.7166] as [number, number]
     },
     {
       id: "3",
-      title: "Trilha do Café Colonial",
-      location: "Sul de Minas, MG",
-      price: 120,
+      title: "Camping Sítio Pousada",
+      location: "Linha Boa Vista, Chapecó, SC",
+      price: 300,
       rating: 4.7,
-      reviews: 67,
-      image: experience1,
-      amenities: ["cafe"],
+      reviews: 203,
+      image: imagem3,
+      amenities: ["wifi", "estacionamento", "cafe"],
       type: "experiencia" as const,
-      coordinates: [-21.7587, -43.3496] as [number, number] // Sul de Minas
+      coordinates: [-27.2954, -52.8166] as [number, number]
     },
     {
       id: "4",
-      title: "Casa do Pão Rural",
-      location: "Interior de São Paulo, SP",
+      title: "Recanto dos Pinhais",
+      location: "Linha Colonia Cella, Chapecó, SC",
       price: 95,
       rating: 4.9,
       reviews: 156,
-      image: gastronomia1,
+      image: imagem4,
       amenities: ["wifi", "cafe", "estacionamento"],
       type: "gastronomia" as const,
-      coordinates: [-22.9068, -47.0653] as [number, number] // Campinas
+      coordinates: [-27.3954, -52.9166] as [number, number]
     },
     {
       id: "5",
-      title: "Vinícola Familiar Santos",
-      location: "Serra Gaúcha, RS",
-      price: 320,
-      rating: 4.8,
-      reviews: 92,
-      image: gastronomia2,
-      amenities: ["wifi", "estacionamento"],
-      type: "gastronomia" as const,
-      coordinates: [-29.1678, -51.1794] as [number, number] // Caxias do Sul
-    },
-    {
-      id: "6",
-      title: "Aula de Culinária Rural",
-      location: "Região Serrana, RJ",
+      title: "Parador Vale das Cachoeiras",
+      location: "EMC-378 - Rodeio do Erval, Chapecó, SC",
       price: 150,
       rating: 4.9,
       reviews: 78,
-      image: gastronomia3,
-      amenities: ["cafe"],
+      image: imagem5,
+      amenities: ["cafe", "wifi", "estacionamento"],
       type: "experiencia" as const,
-      coordinates: [-22.2756, -42.5308] as [number, number] // Nova Friburgo
+      coordinates: [-27.4954, -53.0166] as [number, number]
     },
     {
-      id: "7",
-      title: "Queijaria Artesanal",
-      location: "Sul de Minas, MG",
-      price: 85,
-      rating: 4.7,
-      reviews: 134,
-      image: gastronomia4,
-      amenities: ["wifi", "cafe", "estacionamento"],
+      id: "6",
+      title: "Vinícola Ársego",
+      location: "Linha Rodeio do Erval EMC - 378 - Mal. Bormann, Chapecó, SC",
+      price: 300,
+      rating: 4.8,
+      reviews: 92,
+      image: imagem6,
+      amenities: ["wifi", "estacionamento"],
       type: "gastronomia" as const,
-      coordinates: [-22.2519, -45.7036] as [number, number] // São Lourenço
+      coordinates: [-27.5954, -53.1166] as [number, number]
     }
   ];
+
+  const allItems = featuredProperties;
 
   return (
     <div className="min-h-screen bg-background">
@@ -113,8 +115,8 @@ const Experiencias = () => {
         {/* Header */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-4">
           <div className="flex items-center gap-3">
-            <Button 
-              variant="outline" 
+            <Button
+              variant="outline"
               size="sm"
               onClick={() => navigate('/')}
               className="shrink-0"
@@ -127,7 +129,7 @@ const Experiencias = () => {
                 Experiências Rurais
               </h1>
               <p className="text-muted-foreground mt-1">
-                {experiencias.length} experiências encontradas
+                {allItems.length} experiências encontradas
               </p>
             </div>
           </div>
@@ -142,7 +144,7 @@ const Experiencias = () => {
               <Filter className="w-4 h-4 mr-2" />
               Filtros
             </Button>
-            
+
             <div className="flex rounded-lg bg-muted p-1">
               <Button
                 variant={viewMode === 'grid' ? 'default' : 'ghost'}
@@ -199,8 +201,8 @@ const Experiencias = () => {
               <div className="absolute inset-0 bg-black/50" onClick={() => setIsFilterOpen(false)} />
               <div className="absolute left-0 top-0 h-full w-80 bg-white p-6 shadow-lg">
                 <FilterSidebar />
-                <Button 
-                  className="w-full mt-6" 
+                <Button
+                  className="w-full mt-6"
                   onClick={() => setIsFilterOpen(false)}
                 >
                   Aplicar Filtros
@@ -213,13 +215,13 @@ const Experiencias = () => {
           <div className="flex-1">
             {viewMode === 'grid' ? (
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                {experiencias.map((experiencia) => (
-                  <PropertyCard key={experiencia.id} {...experiencia} />
+                {allItems.map((item) => (
+                  <PropertyCard key={item.id} {...item} />
                 ))}
               </div>
             ) : (
               <div className="h-[600px] rounded-lg overflow-hidden">
-                <MapComponent properties={experiencias} />
+                <MapComponent properties={allItems} />
               </div>
             )}
           </div>
