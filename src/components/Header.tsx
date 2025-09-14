@@ -1,5 +1,6 @@
 import { Search, Menu, User, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   Sheet,
   SheetContent,
@@ -14,23 +15,23 @@ const Header = () => {
     <header className="sticky top-0 z-50 w-full bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60 border-b border-border">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
         {/* Logo */}
-        <div className="flex items-center space-x-2">
+        <Link to="/" className="flex items-center space-x-2">
           <div className="w-8 h-8 bg-gradient-nature rounded-lg flex items-center justify-center">
             <span className="text-white font-bold text-sm">RR</span>
           </div>
           <span className="font-bold text-xl text-primary">RotaRural</span>
-        </div>
+        </Link>
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center space-x-8">
-          <a href="#" className="text-foreground hover:text-primary transition-colors">
+          <Link to="/" className="text-foreground hover:text-primary transition-colors">
             Início
-          </a>
+          </Link>
+          <Link to="/experiencias" className="text-foreground hover:text-primary transition-colors">
+            Experiências
+          </Link>
           <a href="#" className="text-foreground hover:text-primary transition-colors">
             Destinos
-          </a>
-          <a href="#" className="text-foreground hover:text-primary transition-colors">
-            Experiências
           </a>
           <a href="#" className="text-foreground hover:text-primary transition-colors">
             Sobre
@@ -43,11 +44,11 @@ const Header = () => {
             <Heart className="w-4 h-4 mr-2" />
             Favoritos
           </Button>
-          <Button variant="outline" size="sm">
-            Entrar
-          </Button>
-          <Button size="sm" className="bg-gradient-nature text-white hover:opacity-90">
-            Cadastrar Propriedade
+          <Button variant="outline" size="sm" asChild>
+            <Link to="/proprietario/login">
+              <User className="w-4 h-4 mr-2" />
+              Área do Proprietário
+            </Link>
           </Button>
         </div>
 
@@ -66,25 +67,24 @@ const Header = () => {
               </SheetDescription>
             </SheetHeader>
             <nav className="flex flex-col space-y-4 mt-6">
-              <a href="#" className="text-foreground hover:text-primary transition-colors">
+              <Link to="/" className="text-foreground hover:text-primary transition-colors">
                 Início
-              </a>
+              </Link>
+              <Link to="/experiencias" className="text-foreground hover:text-primary transition-colors">
+                Experiências
+              </Link>
               <a href="#" className="text-foreground hover:text-primary transition-colors">
                 Destinos
-              </a>
-              <a href="#" className="text-foreground hover:text-primary transition-colors">
-                Experiências
               </a>
               <a href="#" className="text-foreground hover:text-primary transition-colors">
                 Sobre
               </a>
               <hr className="my-4" />
-              <Button variant="outline" className="justify-start">
-                <User className="w-4 h-4 mr-2" />
-                Entrar
-              </Button>
-              <Button className="bg-gradient-nature text-white justify-start">
-                Cadastrar Propriedade
+              <Button variant="outline" className="justify-start" asChild>
+                <Link to="/proprietario/login">
+                  <User className="w-4 h-4 mr-2" />
+                  Área do Proprietário
+                </Link>
               </Button>
             </nav>
           </SheetContent>
